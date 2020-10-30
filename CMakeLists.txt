@@ -103,6 +103,8 @@ elseif ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -Wall -Wextra -pedantic")
 endif()
 
+add_compile_options(-fPIC)
+
 IF(JSONCPP_WITH_WARNING_AS_ERROR)
     UseCompilationWarningAsError()
 ENDIF(JSONCPP_WITH_WARNING_AS_ERROR)
